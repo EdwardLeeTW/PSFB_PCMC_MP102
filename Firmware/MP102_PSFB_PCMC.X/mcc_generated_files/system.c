@@ -115,21 +115,21 @@
 #include "clock.h"
 #include "system.h"
 #include "system_types.h"
+#include "cmp1.h"
 #include "tmr1.h"
-#include "pwm.h"
-#include "clc3.h"
-#include "adc1.h"
 #include "interrupt_manager.h"
 #include "traps.h"
+#include "adc1.h"
 #include "clc2.h"
 #include "clc1.h"
-#include "cmp1.h"
+#include "pwm.h"
+#include "clc3.h"
 
 void SYSTEM_Initialize(void)
 {
     PIN_MANAGER_Initialize();
-    INTERRUPT_Initialize();
     CLOCK_Initialize();
+    INTERRUPT_Initialize();
     CLC1_Initialize();
     CMP1_Initialize();
     ADC1_Initialize();

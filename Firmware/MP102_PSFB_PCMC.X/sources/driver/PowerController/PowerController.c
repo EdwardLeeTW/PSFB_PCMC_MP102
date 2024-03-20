@@ -99,6 +99,7 @@ volatile uint16_t VMC_ControlObject_Initialize(void)
  *    #define _VCOMP_ISRIF        _PWM1IF         // Define label for interrupt flag bit
  *
  * **************************************************************************************************/
+#include "../../../mcc_generated_files/cmp1.h"
 
 void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
 {
@@ -106,17 +107,20 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     //Read the ADC value from the ADCBUF
     uint16_t valchannel_AN0;
     valchannel_AN0 = ADCBUF0;
+    
+    CMP1_SetDACDataHighValue(3700); // Max 3980 
+    
     // For PWM Boundary Jumping Test
     if(PWMUpdateCount <= 2)
     {
         //0~2
-        PhaseShifted = SysConst_Shift30p;
+        PhaseShifted = SysConst_Shift90p;
         SRdelay = 0x320;
     }
     else
     {
         //3~5
-        PhaseShifted = SysConst_Shift30p;
+        PhaseShifted = SysConst_Shift90p;
         SRdelay = 0x320;
     }
     PG1TRIGA = PhaseShifted;

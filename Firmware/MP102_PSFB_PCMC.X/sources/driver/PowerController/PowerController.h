@@ -10,6 +10,9 @@
 // PWM Module
 #define SysConst_PWMPeriod  39992 //100KHz based on 500MHz
 #define SysConst_Shift99p   (SysConst_PWMPeriod /2 * 0.99)
+#define SysConst_Shift90p   (SysConst_PWMPeriod /2 * 0.90)
+#define SysConst_Shift70p   (SysConst_PWMPeriod /2 * 0.70)
+#define SysConst_Shift50p   (SysConst_PWMPeriod /2 * 0.50)
 #define SysConst_Shift30p   (SysConst_PWMPeriod /2 * 0.30)
 #define SysConst_Shift02p   (SysConst_PWMPeriod /2 * 0.02)
 

@@ -26105,11 +26105,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2CLPCIH"/>
-         <value>0</value>
+         <value>768</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2CLPCIL"/>
-         <value>0</value>
+         <value>6664</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2CONH"/>
@@ -26165,15 +26165,15 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2IOCONL"/>
-         <value>0</value>
+         <value>32784</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2LEBH"/>
-         <value>0</value>
+         <value>266</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2LEBL"/>
-         <value>0</value>
+         <value>79</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2PER"/>
@@ -26185,11 +26185,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2SPCIH"/>
-         <value>0</value>
+         <value>256</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2SPCIL"/>
-         <value>0</value>
+         <value>39487</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG2STAT"/>
@@ -27313,7 +27313,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2CLPCIH" settingAlias="ACP"/>
-         <value>Level-sensitive</value>
+         <value>Latched</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2CLPCIH" settingAlias="BPEN"/>
@@ -27345,11 +27345,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2CLPCIL" settingAlias="AQPS"/>
-         <value>Not inverted</value>
+         <value>Inverted</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2CLPCIL" settingAlias="AQSS"/>
-         <value>None</value>
+         <value>LEB is active</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2CLPCIL" settingAlias="PPS"/>
@@ -27357,7 +27357,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2CLPCIL" settingAlias="PSS"/>
-         <value>Tied to 0</value>
+         <value>RPn input, PCI8R</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2CLPCIL" settingAlias="PSYNC"/>
@@ -27369,7 +27369,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2CLPCIL" settingAlias="TERM"/>
-         <value>Manual Terminate</value>
+         <value>Auto-Terminate</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2CLPCIL" settingAlias="TSYNCDIS"/>
@@ -27657,11 +27657,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2IOCONL" settingAlias="CLDAT"/>
-         <value>0</value>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2IOCONL" settingAlias="CLMOD"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2IOCONL" settingAlias="DBDAT"/>
@@ -27701,7 +27701,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2LEBH" settingAlias="PHR"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2LEBH" settingAlias="PLF"/>
@@ -27709,15 +27709,15 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2LEBH" settingAlias="PLR"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2LEBH" settingAlias="PWMPCI"/>
-         <value>PWM1</value>
+         <value>PWM2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2LEBL" settingAlias="LEB"/>
-         <value>0</value>
+         <value>79</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2PER" settingAlias="PER2"/>
@@ -27729,7 +27729,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2SPCIH" settingAlias="ACP"/>
-         <value>Level-sensitive</value>
+         <value>Rising edge</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2SPCIH" settingAlias="BPEN"/>
@@ -27761,19 +27761,19 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2SPCIL" settingAlias="AQPS"/>
-         <value>Not inverted</value>
+         <value>Inverted</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2SPCIL" settingAlias="AQSS"/>
-         <value>None</value>
+         <value>LEB is active</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2SPCIL" settingAlias="PPS"/>
-         <value>Not inverted</value>
+         <value>Inverted</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2SPCIL" settingAlias="PSS"/>
-         <value>Tied to 0</value>
+         <value>CLC1 output</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2SPCIL" settingAlias="PSYNC"/>
@@ -27785,11 +27785,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2SPCIL" settingAlias="TERM"/>
-         <value>Manual Terminate</value>
+         <value>Auto-Terminate</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2SPCIL" settingAlias="TSYNCDIS"/>
-         <value>PWM EOC</value>
+         <value>Immediately</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG2STAT" settingAlias="CAHALF"/>
@@ -31617,7 +31617,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RPINR12"/>
-         <value>65535</value>
+         <value>65321</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RPINR13"/>
@@ -32641,7 +32641,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RPINR12" settingAlias="PCI8R"/>
-         <value>255</value>
+         <value>41</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RPINR12" settingAlias="PCI9R"/>
@@ -34527,11 +34527,11 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.h</file>
-         <hash>5eb57c7b7d18f31bba4cfd8aceacf9960817b028d8e84c2735b757b13b892d32</hash>
+         <hash>926a62865c7b2a1a004cb58065ca59c29402b965e7d9c377f02abe118150b5f9</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/pin_manager.c</file>
-         <hash>950d79f41740949323ab777cbddb44ee5af8177d99cf7db59001c48c392cfdd0</hash>
+         <hash>d9d48bfb5f94de2207e453af41c4357369b9e12eddfe72b860c5f5cbbe988977</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/pin_manager.h</file>
@@ -34539,7 +34539,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/pwm.c</file>
-         <hash>1093b4b0fdd61bae4ab80338dd6c7d724da1bdc2ec2331a6ef77a590bbf962c0</hash>
+         <hash>f3705ef8cc934a701b81127696aa43e298489c17c423558ce8eea534c7b3098b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/pwm.h</file>
@@ -34563,7 +34563,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/system.c</file>
-         <hash>ce30ff237bf93f39185b36373a28ea9817d064968b14a857d37079aa3d60b341</hash>
+         <hash>adc8dca6d035ca8836e3fcb10be85c2ab17ddf1ab56a05dd23c6a7c05b393ad9</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/system.h</file>
