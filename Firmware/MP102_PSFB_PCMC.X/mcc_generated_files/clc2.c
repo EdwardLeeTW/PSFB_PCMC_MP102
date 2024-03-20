@@ -1,17 +1,17 @@
 /**
-  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Header File
+  CLC2 Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.h
+  @File Name
+    clc2.c
 
-  @Summary:
-    This is the mcc.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+  @Summary
+    This is the generated driver implementation file for the CLC2 driver using PIC24 / dsPIC33 / PIC32MM MCUs
 
-  @Description:
-    This file will be removed in future MCC releases. Use system.h instead.
+  @Description
+    This source file provides implementations for driver APIs for CLC2.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.171.4
         Device            :  dsPIC33CK64MP102
@@ -42,32 +42,72 @@
     TERMS.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "system.h"
-#include "clock.h"
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include "system_types.h"
-#include "reset.h"
+/**
+  Section: Included Files
+*/
 
-#include "tmr1.h"
-#include "pwm.h"
-#include "clc3.h"
-#include "adc1.h"
-#include "watchdog.h"
-#include "reset.h"
-#include "interrupt_manager.h"
-#include "traps.h"
 #include "clc2.h"
-#include "clc1.h"
-#include "cmp1.h"
 
-#warning "This file will be removed in future MCC releases. Use system.h instead."
+/**
+  Section: CLC2 APIs
+*/
 
-#endif	/* MCC_H */
+void CLC2_Initialize(void)
+{
+    // Set the CLC2 to the options selected in the User Interface
+
+	CLC2CONL = 0x8082 & ~(0x8000);
+
+    CLC2CONH = 0x00;
+
+    CLC2SELL = 0x5020;
+
+    CLC2GLSL = 0x808;
+
+    CLC2GLSH = 0x8080;
+
+	
+	CLC2_Enable();
+}
+
+void __attribute__ ((weak)) CLC2_PositiveEdge_CallBack(void)
+{
+    // Add your custom callback code here
+}
+
+void __attribute__ ((weak)) CLC2_NegativeEdge_CallBack(void)
+{
+    // Add your custom callback code here
+}
+
+void CLC2_PositiveEdge_Tasks ( void )
+{
+	if(IFS7bits.CLC2PIF)
+	{
+		// CLC2 PositiveEdge callback function 
+		CLC2_PositiveEdge_CallBack();
+		
+		// clear the CLC2 interrupt flag
+		IFS7bits.CLC2PIF = 0;
+	}
+}
+
+void CLC2_NegativeEdge_Tasks ( void )
+{
+	if(IFS11bits.CLC2NIF)
+	{
+		// CLC2 NegativeEdge callback function 
+		CLC2_NegativeEdge_CallBack();
+		
+		// clear the CLC2 interrupt flag
+		IFS11bits.CLC2NIF = 0;
+	}
+}
+bool CLC2_OutputStatusGet(void)
+{
+    return(CLC2CONLbits.LCOUT);
+
+}
 /**
  End of File
 */

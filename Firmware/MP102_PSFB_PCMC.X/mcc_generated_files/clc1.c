@@ -1,17 +1,17 @@
 /**
-  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Header File
+  CLC1 Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.h
+  @File Name
+    clc1.c
 
-  @Summary:
-    This is the mcc.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+  @Summary
+    This is the generated driver implementation file for the CLC1 driver using PIC24 / dsPIC33 / PIC32MM MCUs
 
-  @Description:
-    This file will be removed in future MCC releases. Use system.h instead.
+  @Description
+    This source file provides implementations for driver APIs for CLC1.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.171.4
         Device            :  dsPIC33CK64MP102
@@ -42,32 +42,72 @@
     TERMS.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "system.h"
-#include "clock.h"
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include "system_types.h"
-#include "reset.h"
+/**
+  Section: Included Files
+*/
 
-#include "tmr1.h"
-#include "pwm.h"
-#include "clc3.h"
-#include "adc1.h"
-#include "watchdog.h"
-#include "reset.h"
-#include "interrupt_manager.h"
-#include "traps.h"
-#include "clc2.h"
 #include "clc1.h"
-#include "cmp1.h"
 
-#warning "This file will be removed in future MCC releases. Use system.h instead."
+/**
+  Section: CLC1 APIs
+*/
 
-#endif	/* MCC_H */
+void CLC1_Initialize(void)
+{
+    // Set the CLC1 to the options selected in the User Interface
+
+	CLC1CONL = 0x80A2 & ~(0x8000);
+
+    CLC1CONH = 0x00;
+
+    CLC1SELL = 0x5020;
+
+    CLC1GLSL = 0x802;
+
+    CLC1GLSH = 0x2020;
+
+	
+	CLC1_Enable();
+}
+
+void __attribute__ ((weak)) CLC1_PositiveEdge_CallBack(void)
+{
+    // Add your custom callback code here
+}
+
+void __attribute__ ((weak)) CLC1_NegativeEdge_CallBack(void)
+{
+    // Add your custom callback code here
+}
+
+void CLC1_PositiveEdge_Tasks ( void )
+{
+	if(IFS7bits.CLC1PIF)
+	{
+		// CLC1 PositiveEdge callback function 
+		CLC1_PositiveEdge_CallBack();
+		
+		// clear the CLC1 interrupt flag
+		IFS7bits.CLC1PIF = 0;
+	}
+}
+
+void CLC1_NegativeEdge_Tasks ( void )
+{
+	if(IFS11bits.CLC1NIF)
+	{
+		// CLC1 NegativeEdge callback function 
+		CLC1_NegativeEdge_CallBack();
+		
+		// clear the CLC1 interrupt flag
+		IFS11bits.CLC1NIF = 0;
+	}
+}
+bool CLC1_OutputStatusGet(void)
+{
+    return(CLC1CONLbits.LCOUT);
+
+}
 /**
  End of File
 */

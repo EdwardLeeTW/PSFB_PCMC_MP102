@@ -1,17 +1,17 @@
 /**
-  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Header File
+  CLC3 Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.h
+  @File Name
+    clc3.c
 
-  @Summary:
-    This is the mcc.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+  @Summary
+    This is the generated driver implementation file for the CLC3 driver using PIC24 / dsPIC33 / PIC32MM MCUs
 
-  @Description:
-    This file will be removed in future MCC releases. Use system.h instead.
+  @Description
+    This source file provides implementations for driver APIs for CLC3.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.171.4
         Device            :  dsPIC33CK64MP102
@@ -42,32 +42,72 @@
     TERMS.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "system.h"
-#include "clock.h"
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include "system_types.h"
-#include "reset.h"
+/**
+  Section: Included Files
+*/
 
-#include "tmr1.h"
-#include "pwm.h"
 #include "clc3.h"
-#include "adc1.h"
-#include "watchdog.h"
-#include "reset.h"
-#include "interrupt_manager.h"
-#include "traps.h"
-#include "clc2.h"
-#include "clc1.h"
-#include "cmp1.h"
 
-#warning "This file will be removed in future MCC releases. Use system.h instead."
+/**
+  Section: CLC3 APIs
+*/
 
-#endif	/* MCC_H */
+void CLC3_Initialize(void)
+{
+    // Set the CLC3 to the options selected in the User Interface
+
+	CLC3CONL = 0x8080 & ~(0x8000);
+
+    CLC3CONH = 0x00;
+
+    CLC3SELL = 0x5000;
+
+    CLC3GLSL = 0x2002;
+
+    CLC3GLSH = 0x8008;
+
+	
+	CLC3_Enable();
+}
+
+void __attribute__ ((weak)) CLC3_PositiveEdge_CallBack(void)
+{
+    // Add your custom callback code here
+}
+
+void __attribute__ ((weak)) CLC3_NegativeEdge_CallBack(void)
+{
+    // Add your custom callback code here
+}
+
+void CLC3_PositiveEdge_Tasks ( void )
+{
+	if(IFS10bits.CLC3PIF)
+	{
+		// CLC3 PositiveEdge callback function 
+		CLC3_PositiveEdge_CallBack();
+		
+		// clear the CLC3 interrupt flag
+		IFS10bits.CLC3PIF = 0;
+	}
+}
+
+void CLC3_NegativeEdge_Tasks ( void )
+{
+	if(IFS11bits.CLC3NIF)
+	{
+		// CLC3 NegativeEdge callback function 
+		CLC3_NegativeEdge_CallBack();
+		
+		// clear the CLC3 interrupt flag
+		IFS11bits.CLC3NIF = 0;
+	}
+}
+bool CLC3_OutputStatusGet(void)
+{
+    return(CLC3CONLbits.LCOUT);
+
+}
 /**
  End of File
 */
