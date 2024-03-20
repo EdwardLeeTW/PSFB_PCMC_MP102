@@ -1,0 +1,1 @@
+ -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -I"sources/driver/PowerController" -Wa,-g,--no-relax$(MP_EXTRA_AS_POST)  -mdfp="${DFP_DIR}/xc16"/Users/edwardlee/GitHub/PSFB_PCMC_MP102/Firmware/MP102_PSFB_PCMC.X/sources/driver/PowerController/VMC_asm.s
