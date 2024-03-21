@@ -9,7 +9,7 @@
     "Language": 31,
     "Max Height": "5X",
     "Operation Mode": 1,
-    "Sample count": "5120",
+    "Sample count": "2048",
     "Sample rate": "25000000",
     "Stop Options": 1,
     "Threshold Level": "1",

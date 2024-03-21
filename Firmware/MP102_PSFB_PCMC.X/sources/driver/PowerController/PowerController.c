@@ -108,7 +108,7 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     uint16_t valchannel_AN0;
     valchannel_AN0 = ADCBUF0;
     
-    CMP1_SetDACDataHighValue(3700); // Max 3980 
+    CMP1_SetDACDataHighValue(3000); // Max 3980 
     
     // For PWM Boundary Jumping Test
     if(PWMUpdateCount <= 2)

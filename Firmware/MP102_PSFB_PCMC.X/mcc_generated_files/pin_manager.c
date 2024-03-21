@@ -95,14 +95,14 @@ void PIN_MANAGER_Initialize (void)
      ***************************************************************************/
     __builtin_write_RPCON(0x0000); // unlock PPS
 
-    RPINR12bits.PCI8R = 0x0029;    //RB9->PWM:PCI8
-    RPINR47bits.CLCINDR = 0x002F;    //RB15->CLC1:CLCIND
-    RPINR45bits.CLCINAR = 0x002D;    //RB13->CLC3:CLCINA
-    RPOR0bits.RP32R = 0x003B;    //RB0->CLC3:CLC3OUT
     RPINR46bits.CLCINCR = 0x002E;    //RB14->CLC1:CLCINC
     RPINR46bits.CLCINBR = 0x002C;    //RB12->CLC3:CLCINB
-    RPOR4bits.RP41R = 0x0029;    //RB9->CLC2:CLC2OUT
+    RPOR0bits.RP32R = 0x003B;    //RB0->CLC3:CLC3OUT
+    RPINR12bits.PCI8R = 0x0029;    //RB9->PWM:PCI8
+    RPINR45bits.CLCINAR = 0x002D;    //RB13->CLC3:CLCINA
+    RPINR47bits.CLCINDR = 0x002F;    //RB15->CLC1:CLCIND
     RPOR4bits.RP40R = 0x0028;    //RB8->CLC1:CLC1OUT
+    RPOR4bits.RP41R = 0x0029;    //RB9->CLC2:CLC2OUT
 
     __builtin_write_RPCON(0x0800); // lock PPS
 }
