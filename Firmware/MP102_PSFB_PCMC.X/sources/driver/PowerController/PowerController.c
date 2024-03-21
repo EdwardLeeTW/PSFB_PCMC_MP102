@@ -114,13 +114,13 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     if(PWMUpdateCount <= 2)
     {
         //0~2
-        PhaseShifted = SysConst_Shift90p;
+        PhaseShifted = SysConst_Shift99p;
         SRdelay = 0x320;
     }
     else
     {
         //3~5
-        PhaseShifted = SysConst_Shift90p;
+        PhaseShifted = SysConst_Shift99p;
         SRdelay = 0x320;
     }
     PG1TRIGA = PhaseShifted;
