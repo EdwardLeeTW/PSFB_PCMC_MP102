@@ -60,6 +60,12 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     
+    PWMEVTAbits.EVTASEL = 0b0100;//select CL active as event out
+    PWMEVTAbits.EVTASTRD = 0;//use stretched output
+    PWMEVTAbits.EVTAPGS = 1;//select PG2 event signal
+    PWMEVTAbits.EVTAOEN = 1;//turn on event output
+    //_RP37R = 36;//RP37=PWM_EVTA=CL_active(use it in pin manager initialization)
+   
     // OS
     OS_Init();
     OS_Scheduler_RunForever();
